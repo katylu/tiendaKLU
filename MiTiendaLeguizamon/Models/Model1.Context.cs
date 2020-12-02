@@ -13,10 +13,10 @@ namespace MiTiendaLeguizamon.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class TiendaLeguizamonEntities : DbContext
+    public partial class DBTiendaLeguizamonEntities : DbContext
     {
-        public TiendaLeguizamonEntities()
-            : base("name=TiendaLeguizamonEntities")
+        public DBTiendaLeguizamonEntities()
+            : base("name=DBTiendaLeguizamonEntities")
         {
         }
     
@@ -29,5 +29,6 @@ namespace MiTiendaLeguizamon.Models
         public virtual DbSet<Producto> Productoes { get; set; }
         public virtual DbSet<Proveedor> Proveedors { get; set; }
         public virtual DbSet<Seccion> Seccions { get; set; }
+        public virtual DbSet<Tipo_Material> Tipo_Material { get; set; }
     }
 }

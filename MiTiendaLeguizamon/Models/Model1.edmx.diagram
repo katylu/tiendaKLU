@@ -4,11 +4,12 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="0702338292e14e16b7d3f159ebc7f1e6" Name="Diagram1">
-        <EntityTypeShape EntityType="DBTiendaLeguizamonModel.Marca" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DBTiendaLeguizamonModel.Producto" Width="1.5" PointX="4.125" PointY="0.875" IsExpanded="true" />
+      <Diagram DiagramId="be597670a05c460fb3b03b0924cb8ece" Name="Diagram1">
+        <EntityTypeShape EntityType="DBTiendaLeguizamonModel.Marca" Width="1.5" PointX="1.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBTiendaLeguizamonModel.Producto" Width="1.5" PointX="4" PointY="0.875" IsExpanded="true" />
         <EntityTypeShape EntityType="DBTiendaLeguizamonModel.Proveedor" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="DBTiendaLeguizamonModel.Seccion" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBTiendaLeguizamonModel.Tipo_Material" Width="1.5" PointX="6.125" PointY="2" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

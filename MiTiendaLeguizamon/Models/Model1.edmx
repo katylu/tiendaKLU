@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="DBTiendaLeguizamonModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="DBTiendaLeguizamonModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Marca">
           <Key>
             <PropertyRef Name="Id" />
@@ -37,21 +37,22 @@
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Descripcion" Type="varchar" MaxLength="50" />
         </EntityType>
-        <!--Errores durante la generación:
-advertencia 6013: La tabla o vista 'DBTiendaLeguizamon.dbo.Tipo_Material' no tiene definida una clave principal y no es posible inferir ninguna clave principal válida. Esta tabla o vista se ha excluido. Para usar la entidad, necesitará revisar el esquema, agregar las claves correctas y quitar sus comentarios.
         <EntityType Name="Tipo_Material">
-          <Property Name="Id" Type="int" />
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="descripcion" Type="varchar" MaxLength="50" />
           <Property Name="caracteristicas" Type="varchar" MaxLength="50" />
-        </EntityType>-->
+        </EntityType>
         <EntityContainer Name="DBTiendaLeguizamonModelStoreContainer">
           <EntitySet Name="Marca" EntityType="Self.Marca" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Producto" EntityType="Self.Producto" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Proveedor" EntityType="Self.Proveedor" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Seccion" EntityType="Self.Seccion" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tipo_Material" EntityType="Self.Tipo_Material" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="DBTiendaLeguizamonModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -87,18 +88,27 @@ advertencia 6013: La tabla o vista 'DBTiendaLeguizamon.dbo.Tipo_Material' no tie
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Descripcion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
-        <EntityContainer Name="TiendaLeguizamonEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="DBTiendaLeguizamonEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Marcas" EntityType="Self.Marca" />
           <EntitySet Name="Productoes" EntityType="Self.Producto" />
           <EntitySet Name="Proveedors" EntityType="Self.Proveedor" />
           <EntitySet Name="Seccions" EntityType="Self.Seccion" />
+          <EntitySet Name="Tipo_Material" EntityType="DBTiendaLeguizamonModel.Tipo_Material" />
         </EntityContainer>
+        <EntityType Name="Tipo_Material">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="descripcion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="caracteristicas" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="DBTiendaLeguizamonModelStoreContainer" CdmEntityContainer="TiendaLeguizamonEntities">
+        <EntityContainerMapping StorageEntityContainer="DBTiendaLeguizamonModelStoreContainer" CdmEntityContainer="DBTiendaLeguizamonEntities">
           <EntitySetMapping Name="Marcas">
             <EntityTypeMapping TypeName="DBTiendaLeguizamonModel.Marca">
               <MappingFragment StoreEntitySet="Marca">
@@ -132,6 +142,15 @@ advertencia 6013: La tabla o vista 'DBTiendaLeguizamon.dbo.Tipo_Material' no tie
               <MappingFragment StoreEntitySet="Seccion">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tipo_Material">
+            <EntityTypeMapping TypeName="DBTiendaLeguizamonModel.Tipo_Material">
+              <MappingFragment StoreEntitySet="Tipo_Material">
+                <ScalarProperty Name="caracteristicas" ColumnName="caracteristicas" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

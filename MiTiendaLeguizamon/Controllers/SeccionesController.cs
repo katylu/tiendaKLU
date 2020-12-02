@@ -12,7 +12,7 @@ namespace MiTiendaLeguizamon.Controllers
 {
     public class SeccionesController : Controller
     {
-        private TiendaLeguizamonEntities db = new TiendaLeguizamonEntities();
+        private DBTiendaLeguizamonEntities db = new DBTiendaLeguizamonEntities();
 
         // GET: Secciones
         public ActionResult Index()
