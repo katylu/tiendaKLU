@@ -185,10 +185,10 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\MarcasAPIController.cs" />
     <Compile Include="Controllers\MarcasController.cs" />
     <Compile Include="Controllers\ProductosController.cs" />
     <Compile Include="Controllers\SeccionesController.cs" />
-    <Compile Include="Controllers\TipoMaterialController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -233,10 +233,57 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\nosotros.css" />
+    <Content Include="Content\template\animate.css" />
+    <Content Include="Content\template\bootstrap-datepicker.css" />
+    <Content Include="Content\template\bootstrap.min.css" />
+    <Content Include="Content\template\flexslider.css" />
+    <Content Include="Content\template\icomoon.css" />
+    <Content Include="Content\template\ionicons.min.css" />
+    <Content Include="Content\template\magnific-popup.css" />
+    <Content Include="Content\template\owl.carousel.min.css" />
+    <Content Include="Content\template\owl.theme.default.min.css" />
+    <Content Include="Content\template\style.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="images\about.jpg" />
+    <Content Include="images\blog-1.jpg" />
+    <Content Include="images\blog-2.jpg" />
+    <Content Include="images\blog-3.jpg" />
+    <Content Include="images\brand-1.jpg" />
+    <Content Include="images\brand-2.jpg" />
+    <Content Include="images\brand-3.jpg" />
+    <Content Include="images\brand-4.jpg" />
+    <Content Include="images\brand-5.jpg" />
+    <Content Include="images\cover-img-1.jpg" />
+    <Content Include="images\img_bg_1.jpg" />
+    <Content Include="images\img_bg_2.jpg" />
+    <Content Include="images\img_bg_3.jpg" />
+    <Content Include="images\item-1.jpg" />
+    <Content Include="images\item-10.jpg" />
+    <Content Include="images\item-11.jpg" />
+    <Content Include="images\item-12.jpg" />
+    <Content Include="images\item-13.jpg" />
+    <Content Include="images\item-14.jpg" />
+    <Content Include="images\item-15.jpg" />
+    <Content Include="images\item-16.jpg" />
+    <Content Include="images\item-2.jpg" />
+    <Content Include="images\item-3.jpg" />
+    <Content Include="images\item-4.jpg" />
+    <Content Include="images\item-5.jpg" />
+    <Content Include="images\item-6.jpg" />
+    <Content Include="images\item-7.jpg" />
+    <Content Include="images\item-8.jpg" />
+    <Content Include="images\item-9.jpg" />
+    <Content Include="images\loader.gif" />
+    <Content Include="images\loc.png" />
+    <Content Include="images\men.jpg" />
+    <Content Include="images\person1.jpg" />
+    <Content Include="images\person2.jpg" />
+    <Content Include="images\person3.jpg" />
+    <Content Include="images\women.jpg" />
     <Content Include="Models\Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model1.edmx</DependentUpon>
@@ -256,6 +303,7 @@
     <Content Include="Models\Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
     </Content>
+    <None Include="Properties\PublishProfiles\MiTiendaLeguizamon - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -266,7 +314,26 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\template\aos.js" />
+    <Content Include="Scripts\template\bootstrap-datepicker.js" />
+    <Content Include="Scripts\template\bootstrap.min.js" />
+    <Content Include="Scripts\template\google_map.js" />
+    <Content Include="Scripts\template\jquery-3.2.1.min.js" />
+    <Content Include="Scripts\template\jquery-migrate-3.0.1.min.js" />
+    <Content Include="Scripts\template\jquery.animateNumber.min.js" />
+    <Content Include="Scripts\template\jquery.countTo.js" />
+    <Content Include="Scripts\template\jquery.easing.1.3.js" />
+    <Content Include="Scripts\template\jquery.flexslider-min.js" />
+    <Content Include="Scripts\template\jquery.magnific-popup.min.js" />
+    <Content Include="Scripts\template\jquery.min.js" />
+    <Content Include="Scripts\template\jquery.stellar.min.js" />
+    <Content Include="Scripts\template\jquery.waypoints.min.js" />
+    <Content Include="Scripts\template\magnific-popup-options.js" />
+    <Content Include="Scripts\template\main.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\template\owl.carousel.min.js" />
+    <Content Include="Scripts\template\popper.min.js" />
+    <Content Include="Scripts\template\respond.min.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -309,6 +376,7 @@
     <Content Include="Views\Marcas\Index.cshtml" />
     <Content Include="Views\Productos\Create.cshtml" />
     <Content Include="Views\Productos\Index.cshtml" />
+    <Content Include="Views\Shared\_Layout - Copia.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

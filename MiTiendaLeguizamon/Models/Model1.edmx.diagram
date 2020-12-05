@@ -10,6 +10,7 @@
         <EntityTypeShape EntityType="DBTiendaLeguizamonModel.Proveedor" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="DBTiendaLeguizamonModel.Seccion" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="DBTiendaLeguizamonModel.Tipo_Material" Width="1.5" PointX="6.125" PointY="2" />
+        <EntityTypeShape EntityType="DBTiendaLeguizamonModel.Contacto" Width="1.5" PointX="6.125" PointY="3.875" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
