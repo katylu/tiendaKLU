@@ -1,26 +1,32 @@
 ﻿@model MiTiendaLeguizamon.Models.Seccion
 
-@{
-    ViewBag.Title = "Details";
-}
+<div class="colorlib-product">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8 offset-sm-2 text-center colorlib-heading colorlib-heading-sm">
+                <h2>Detalles de la Seccion</h2>
+            </div>
+        </div>
 
-<h2>Details</h2>
+        <div>
 
-<div>
-    <h4>Seccion</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Descripcion)
-        </dt>
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Descripcion):
+                </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Descripcion)
-        </dd>
+                <dd>
+                    @Html.DisplayFor(model => model.Descripcion)
+                </dd>
 
-    </dl>
+            </dl>
+        </div>
+        
+        <div class="row">
+            <div class="col-sm-8 offset-sm-2 text-center colorlib-heading colorlib-heading-sm">
+                <h2>@Html.ActionLink("Volver al Listado", "Index", "Secciones", null)</h2>
+            </div>
+        </div>
+
+    </div>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>

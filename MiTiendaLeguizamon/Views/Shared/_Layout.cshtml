@@ -16,6 +16,9 @@
         <nav class="colorlib-nav" role="navigation">
             <div class="top-menu">
                 <div class="container">
+                    <div>
+                        @Html.Partial("_LoginPartial")
+                    </div>
                     <div class="row">
                         <div class="col-sm-7 col-md-9">
                             <div id="colorlib-logo">@Html.ActionLink("Mi Tienda Leguizamon", "Index", "Home")</div>
@@ -28,20 +31,28 @@
                                 <li class="has-dropdown">
                                     <a href="#">Catalogo</a>
                                     <ul class="dropdown">
-                                        <li><a href="product-detail.html">Hombres</a></li>
-                                        <li><a href="cart.html">Mujeres</a></li>
-                                        <li><a href="checkout.html">Niños</a></li>
-                                        <li><a href="order-complete.html">Carteras</a></li>
+                                        <li>@Html.ActionLink("Hombres", "Hombres", "Catalogo")</li>
+                                        <li>@Html.ActionLink("Mujeres", "Mujeres", "Catalogo")</li>
+                                        <li>@Html.ActionLink("Niños", "Kids", "Catalogo")</li>
+                                        <li>@Html.ActionLink("Carteras", "Carteras", "Catalogo")</li>
                                     </ul>
                                 </li>
-                                <li>@Html.ActionLink("Secciones", "Index", "Secciones")</li>
                                 <li>@Html.ActionLink("Nosotros", "About", "Home")</li>
                                 <li>@Html.ActionLink("Contacto", "Contact", "Home")</li>
-
+                                @if (Request.IsAuthenticated)
+                                {
+                                    <li>@Html.ActionLink("Secciones", "Index", "Secciones")</li>
+                                }
+                                @if (Request.IsAuthenticated)
+                                {
+                                    <li>@Html.ActionLink("Cargar Producto", "Create", "Productos")</li>
+                                }
+                                @if (Request.IsAuthenticated)
+                                {
+                                    <li>@Html.ActionLink("Marcas", "Index", "Marcas")</li>
+                                }
                             </ul>
-                            <div>
-                                @Html.Partial("_LoginPartial")
-                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -54,12 +65,12 @@
                                 <div class="owl-carousel2">
                                     <div class="item">
                                         <div class="col">
-                                            <h3><a href="#">25% off (Almost) Everything! Use Code: Summer Sale</a></h3>
+                                            <h3><a href="#">25% off En (Casi) Todo! Utilice el código: Summer Sale</a></h3>
                                         </div>
                                     </div>
                                     <div class="item">
                                         <div class="col">
-                                            <h3><a href="#">Our biggest sale yet 50% off all summer shoes</a></h3>
+                                            <h3><a href="#">Aun seguimos con el 50% de descuento en Carteras</a></h3>
                                         </div>
                                     </div>
                                 </div>
@@ -72,10 +83,82 @@
         <div class="container body-content">
             @RenderBody()
             <hr />
-            <footer>
-                <p>&copy; @DateTime.Now.Year - Mi aplicación ASP.NET</p>
-            </footer>
+
         </div>
+        <footer id="colorlib-footer" role="contentinfo">
+            <div class="container">
+                <div class="row row-pb-md">
+                    <div class="col footer-col colorlib-widget">
+                        <h4>Mi Tienda Leguizamon</h4>
+                        <p>Tiendita Virtual hecha con ASP MVC para la Materia de PROGRAMACIÓN ORIENTADA POR OBJETOS AVANZADA - C#</p>
+                        <p>
+                            <ul class="colorlib-social-icons">
+                                <li><a href="#"><i class="icon-twitter"></i></a></li>
+                                <li><a href="#"><i class="icon-facebook"></i></a></li>
+                                <li><a href="#"><i class="icon-linkedin"></i></a></li>
+                                <li><a href="#"><i class="icon-dribbble"></i></a></li>
+                            </ul>
+                        </p>
+                    </div>
+                    <div class="col footer-col colorlib-widget">
+                        <h4>Zona Clientes</h4>
+                        <p>
+                            <ul class="colorlib-footer-links">
+                                <li><a href="#">Contactos</a></li>
+                                <li><a href="#">Devoluciones/Cambios</a></li>
+                                <li><a href="#">Gifts Cards</a></li>
+                                <li><a href="#">Wishlist</a></li>
+                                <li><a href="#">Especiales</a></li>
+                                <li><a href="#">Atencion al Cliente</a></li>
+                                <li><a href="#">Mapa del Sitio</a></li>
+                            </ul>
+                        </p>
+                    </div>
+                    <div class="col footer-col colorlib-widget">
+                        <h4>Informacion</h4>
+                        <p>
+                            <ul class="colorlib-footer-links">
+                                <li><a href="#">Nosotros</a></li>
+                                <li><a href="#">Informacion de Delivery</a></li>
+                                <li><a href="#">Politica de Privacidad</a></li>
+                                <li><a href="#">Soporte</a></li>
+                                <li><a href="#">Tracking de Ordenes</a></li>
+                            </ul>
+                        </p>
+                    </div>
+
+                    <div class="col footer-col">
+                        <h4>Novedades</h4>
+                        <ul class="colorlib-footer-links">
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="#">Eventos</a></li>
+                            <li><a href="#">Ferias</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col footer-col">
+                        <h4>Informacion de Contacto</h4>
+                        <ul class="colorlib-footer-links">
+                            <li>Jejuí 667, <br>Asunción</li>
+                            <li><a href="tel://59521495873">(021) 495 873</a></li>
+                            <li><a href="mailto:info@uaa.edu.py">info@uaa.edu.py</a></li>
+                            <li><a href="#">mitiendaleguizamon.com</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="copy">
+                <div class="row">
+                    <div class="col-sm-12 text-center">
+                        <p>
+                            <span>
+                                Copyright &copy;
+                                <script>document.write(new Date().getFullYear());</script> Todos los derechos reservados | <i class="icon-heart" aria-hidden="true"></i> </span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </div>
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")

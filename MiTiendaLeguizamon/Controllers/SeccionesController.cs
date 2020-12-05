@@ -10,6 +10,7 @@ using MiTiendaLeguizamon.Models;
 
 namespace MiTiendaLeguizamon.Controllers
 {
+    [Authorize]
     public class SeccionesController : Controller
     {
         private DBTiendaLeguizamonEntities db = new DBTiendaLeguizamonEntities();

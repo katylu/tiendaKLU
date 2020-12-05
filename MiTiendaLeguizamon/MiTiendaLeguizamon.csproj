@@ -187,12 +187,16 @@
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MarcasAPIController.cs" />
     <Compile Include="Controllers\MarcasController.cs" />
+    <Compile Include="Controllers\CatalogoController.cs" />
     <Compile Include="Controllers\ProductosController.cs" />
     <Compile Include="Controllers\SeccionesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Contacto.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Marca.cs">
@@ -233,6 +237,14 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\fonts\bootstrap\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\fonts\flaticon\backup.txt" />
+    <Content Include="Content\fonts\flaticon\font\flaticon.css" />
+    <Content Include="Content\fonts\flaticon\font\flaticon.html" />
+    <Content Include="Content\fonts\flaticon\font\Flaticon.svg" />
+    <Content Include="Content\fonts\icomoon\icomoon.svg" />
+    <Content Include="Content\fonts\ionicons\css\ionicons.min.css" />
+    <Content Include="Content\fonts\ionicons\fonts\ionicons.svg" />
     <Content Include="Content\nosotros.css" />
     <Content Include="Content\template\animate.css" />
     <Content Include="Content\template\bootstrap-datepicker.css" />
@@ -269,7 +281,11 @@
     <Content Include="images\item-14.jpg" />
     <Content Include="images\item-15.jpg" />
     <Content Include="images\item-16.jpg" />
+    <Content Include="images\item-17.jpg" />
+    <Content Include="images\item-18.jpg" />
+    <Content Include="images\item-19.jpg" />
     <Content Include="images\item-2.jpg" />
+    <Content Include="images\item-20.jpg" />
     <Content Include="images\item-3.jpg" />
     <Content Include="images\item-4.jpg" />
     <Content Include="images\item-5.jpg" />
@@ -303,6 +319,27 @@
     <Content Include="Models\Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
     </Content>
+    <Content Include="Content\fonts\bootstrap\.DS_Store" />
+    <Content Include="Content\fonts\bootstrap\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\fonts\bootstrap\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\fonts\bootstrap\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\fonts\bootstrap\glyphicons-halflings-regular.woff2" />
+    <Content Include="Content\fonts\flaticon\.DS_Store" />
+    <Content Include="Content\fonts\flaticon\font\Flaticon.eot" />
+    <Content Include="Content\fonts\flaticon\font\Flaticon.ttf" />
+    <Content Include="Content\fonts\flaticon\font\Flaticon.woff" />
+    <Content Include="Content\fonts\flaticon\font\_flaticon.scss" />
+    <Content Include="Content\fonts\flaticon\license\license.pdf" />
+    <Content Include="Content\fonts\icomoon\.DS_Store" />
+    <Content Include="Content\fonts\icomoon\icomoon.eot" />
+    <Content Include="Content\fonts\icomoon\icomoon.ttf" />
+    <Content Include="Content\fonts\icomoon\icomoon.woff" />
+    <Content Include="Content\fonts\ionicons\css\_ionicons.scss" />
+    <Content Include="Content\fonts\ionicons\fonts\.DS_Store" />
+    <Content Include="Content\fonts\ionicons\fonts\ionicons.eot" />
+    <Content Include="Content\fonts\ionicons\fonts\ionicons.ttf" />
+    <Content Include="Content\fonts\ionicons\fonts\ionicons.woff" />
+    <Content Include="Content\fonts\ionicons\fonts\ionicons.woff2" />
     <None Include="Properties\PublishProfiles\MiTiendaLeguizamon - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
@@ -377,6 +414,10 @@
     <Content Include="Views\Productos\Create.cshtml" />
     <Content Include="Views\Productos\Index.cshtml" />
     <Content Include="Views\Shared\_Layout - Copia.cshtml" />
+    <Content Include="Views\Catalogo\Hombres.cshtml" />
+    <Content Include="Views\Catalogo\Mujeres.cshtml" />
+    <Content Include="Views\Catalogo\Carteras.cshtml" />
+    <Content Include="Views\Catalogo\Kids.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

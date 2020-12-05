@@ -1,51 +1,64 @@
 ﻿@model IEnumerable<MiTiendaLeguizamon.Models.Producto>
 
-@{
-    ViewBag.Title = "Index";
-}
+<div class="colorlib-product">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8 offset-sm-2 text-center colorlib-heading colorlib-heading-sm">
+                <h2>Productos</h2>
+            </div>
+        </div>
+        <div class="row row-pb-lg">
+            <div class="col-md-12">
+                <div class="product-name d-flex">
+                    <div class="one-forth text-left px-4">
+                        <span>@Html.DisplayNameFor(model => model.Descripcion)</span>
+                    </div>
+                    <div class="one-forth text-left px-4">
+                        <span>@Html.DisplayNameFor(model => model.Marca)</span>
+                    </div>
+                    <div class="one-forth text-left px-4">
+                        <span>@Html.DisplayNameFor(model => model.Seccion_Id)</span>
+                    </div>
+                    <div class="one-forth text-left px-4">
+                        <span>@Html.DisplayNameFor(model => model.Tipo_Material_Id)</span>
+                    </div>
+                </div>
+                @foreach (var item in Model)
+                {
+            <div class="product-cart d-flex">
+                <div class="one-forth">
+                    <div class="display-tc">
+                        <h3>@Html.DisplayFor(modelItem => item.Descripcion)</h3>
+                    </div>
+                </div>
+                <div class="one-forth">
+                    <div class="display-tc">
+                        <h3>@Html.DisplayFor(modelItem => item.Marca)</h3>
+                    </div>
+                </div>
+                <div class="one-forth">
+                    <div class="display-tc">
+                        <h3>@Html.DisplayFor(modelItem => item.Seccion_Id)</h3>
+                    </div>
+                </div>
+                <div class="one-forth">
+                    <div class="display-tc">
+                        <h3>@Html.DisplayFor(modelItem => item.Tipo_Material_Id)</h3>
+                    </div>
+                </div>
+            </div>
+                }
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-8 offset-sm-2 text-center colorlib-heading colorlib-heading-sm">
+                <h2>@Html.ActionLink("Crear Producto", "Create", "Secciones", null)</h2>
+            </div>
+        </div>
+    </div>
+</div>
 
-<h2>Index</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Descripcion)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Marca)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Seccion_Id)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Tipo_Material_Id)
-        </th>
-        <th></th>
-    </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Descripcion)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Marca)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Seccion_Id)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Tipo_Material_Id)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
-        </td>
-    </tr>
-}
 
-</table>
+

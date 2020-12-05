@@ -4,13 +4,13 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="be597670a05c460fb3b03b0924cb8ece" Name="Diagram1">
-        <EntityTypeShape EntityType="DBTiendaLeguizamonModel.Marca" Width="1.5" PointX="1.25" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DBTiendaLeguizamonModel.Producto" Width="1.5" PointX="4" PointY="0.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="DBTiendaLeguizamonModel.Proveedor" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DBTiendaLeguizamonModel.Seccion" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DBTiendaLeguizamonModel.Tipo_Material" Width="1.5" PointX="6.125" PointY="2" />
-        <EntityTypeShape EntityType="DBTiendaLeguizamonModel.Contacto" Width="1.5" PointX="6.125" PointY="3.875" />
+      <Diagram DiagramId="e134402a7c464306ae5c9ead0b29722e" Name="Diagram1">
+        <EntityTypeShape EntityType="DBTiendaLeguizamonModel.Contacto" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBTiendaLeguizamonModel.Marca" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBTiendaLeguizamonModel.Producto" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBTiendaLeguizamonModel.Proveedor" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBTiendaLeguizamonModel.Seccion" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBTiendaLeguizamonModel.Tipo_Material" Width="1.5" PointX="4.75" PointY="3.75" IsExpanded="true" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

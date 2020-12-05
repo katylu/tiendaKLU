@@ -25,6 +25,7 @@ namespace MiTiendaLeguizamon.Models
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<Contacto> Contactoes { get; set; }
         public virtual DbSet<Marca> Marcas { get; set; }
         public virtual DbSet<Producto> Productoes { get; set; }
         public virtual DbSet<Proveedor> Proveedors { get; set; }
